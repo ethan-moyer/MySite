@@ -1,0 +1,15 @@
+---
+title: Posts
+layout: layouts/base
+---
+<section class="section">
+    <h1 class="title">Posts</h1>
+    {% for post in collections.post reversed %}
+        <div class="block">
+            <a href="{{ post.url }}">
+                <h1 class="title is-size-5">{{ post.data.title }}</h1>
+                <h1 class="subtitle is-size-6">{{ post.date | postDate }}</h1>
+            </a>
+        </div>
+    {% endfor %}
+</section>

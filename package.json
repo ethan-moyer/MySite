@@ -1,0 +1,21 @@
+{
+  "name": "MySite",
+  "version": "1.0.0",
+  "description": "Ethan Moyer's website!",
+  "main": "index.js",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url _sass/main.scss css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "build": "npm run css-build && npx eleventy",
+    "watch": "npx eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Ethan Moyer",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "bulma": "^0.9.2",
+    "node-sass": "^6.0.0",
+    "striptags": "^3.1.1"
+  }
+}

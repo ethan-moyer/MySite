@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+$section-padding: 1.2rem 0rem;
+@import "../node_modules/bulma/bulma.sass";
+
+a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border-top: 5px solid rgb(27, 27, 27);
+}
+
+.divider-light {
+    border-top: 2px solid rgb(165, 165, 165);
+}
+
+#navbar {
+    margin-top: 21px;
+}

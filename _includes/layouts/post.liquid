@@ -1,0 +1,11 @@
+---
+layout: /layouts/base
+---
+<h1 class="title">{{ title }}</h1>
+{% unless hideDate == true %}
+    <h1 class="subtitle is-5">{{ page.date | postDate }}</h2>
+{% endunless %}
+{% if image %}
+    <img src="{{ "../../images/" | append: image }}">
+{% endif %}
+{{ content | safe }}

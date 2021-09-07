@@ -1,0 +1,20 @@
+---
+title: Projects
+layout: layouts/base
+pagination:
+    data: collections.project
+    size: 5
+    reverse: true
+    alias: posts
+---
+{% for post in posts %}
+    <section class="section">
+        <a href="{{ post.url }}">
+            <h1 class="title is-size-4" href="{{ post.url }}">{{ post.data.title }}</h1>
+            <!--<h1 class="subtitle is-size-5">{{ post.date | postDate }}</h1>-->
+        </a>
+        <img src="{{ "images/" | append: post.data.image }}">
+        <p class="is-size-5">{{ post.templateContent | excerpt }}</p>
+        <hr class="divider-light">
+    </section>
+{% endfor %}
