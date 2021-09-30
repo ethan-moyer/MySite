@@ -13,7 +13,9 @@ pagination:
             <h1 class="title is-size-4" href="{{ post.url }}">{{ post.data.title }}</h1>
             <!--<h1 class="subtitle is-size-5">{{ post.date | postDate }}</h1>-->
         </a>
-        <img src="{{ "images/" | append: post.data.image }}">
+        {% if post.data.image %}
+            <img src="{{ "images/" | append: post.data.image }}">
+        {% endif %}
         <p class="is-size-5">{{ post.templateContent | excerpt }}</p>
         <hr class="divider-light">
     </section>
